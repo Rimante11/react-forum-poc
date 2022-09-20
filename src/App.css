@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+/*color variables*/
+:root {
+  --purple: #d8b8a6;
+  --orangered: #e95638 ;
+  --lightpurple: #e3cacc;
+  --lightgreen: #c7b64d;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--purple);
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.huvudTitle {
+  font-family: 'Luckiest Guy', cursive;
+  color: var(--orangered);
+  display: table;
+  margin: auto;
+  margin-top: 25px;
+  background-color: var(--lightpurple);
+  padding: 5px 20px;
+  border-radius: 3px;
+  text-decoration: underline;
+  text-decoration-color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttonWrapper {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 150px;
+}
+
+.homePageBtn {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid salmon;
+  font-family: 'Prompt', sans-serif;
+  background-color: var(--lightgreen);
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+
+}
+
+.postsIntro {
+  font-family: 'Prompt', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+h3::first-letter,
+p::first-letter {
+  text-transform: uppercase;
+}
+
+.postTitle {
+  color: rgb(244, 235, 235);
+  text-decoration: underline;
+  text-decoration-color: var(--orangered);
+  background-color: var(--lightgreen);
+  padding: 10px;
+  padding-left: 20px;
+  border: 3px;
+  cursor: pointer;
+  margin-right: 150px;
+  margin-left: 150px;
+  font-family: 'Prompt', sans-serif;
+}
+
+.postTitle:hover {
+  cursor: pointer;
+  background-color: lightcoral;
+  color: orange;
+  text-decoration-color: #fff;
+}
+
+
+/*One post & comments sida*/
+.onePostTitle, .commentsTitleText {
+  font-family: 'Prompt', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.huvudComment {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 0px 5px;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-family: 'Prompt', sans-serif;
+  background-color: #e3cacc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.postBody {
+  background-color: rgb(238, 75, 130);
+  margin-top: 0px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.onePostTitle {
+  text-transform: uppercase;
+  background-color: var(--orangered);
+  color: #e3cacc;
+  border-radius: 5px;
+}
+
+.commentsContainer {
+  display: flex;
+  flex-direction: column;
+  /*padding: 0px 150px;*/
+}
+
+.commentSection:nth-child(even) {
+  background-color: rgb(190, 189, 189);
+}
+
+.commentSection { 
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: gainsboro;
+  border-radius: 5px;
+  padding: 0px 15px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 15px;
+  font-family: 'Prompt', sans-serif;
+  text-align: justify;
+  box-shadow: 5px 10px #888888;
+}
+
+.footerTitle {
+  background-color: var(--orangered);
+  padding: 20px 0px 40px 0px;
+  margin-bottom: 0px;
+  text-transform: none;
+  font-family: 'Prompt', sans-serif;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
